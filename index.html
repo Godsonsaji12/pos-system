@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant POS System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <h2>Menu</h2>
+        <div class="item">
+          <span>🍛 Biryani</span>
+          <button onclick="addToOrder('Biryani', 150)">Add ₹150</button>
+        </div>
+        <div class="item">
+          <span>🍲 Paneer Butter Masala</span>
+          <button onclick="addToOrder('Paneer Butter Masala', 120)">
+            Add ₹120
+          </button>
+        </div>
+        <div class="item">
+          <span>🍖 Chicken Curry</span>
+          <button onclick="addToOrder('Chicken Curry', 140)">Add ₹140</button>
+        </div>
+        <div class="item">
+          <span>🍛 Dal Makhani</span>
+          <button onclick="addToOrder('Dal Makhani', 100)">Add ₹100</button>
+        </div>
+        <div class="item">
+          <span>🥘 Masala Dosa</span>
+          <button onclick="addToOrder('Masala Dosa', 80)">Add ₹80</button>
+        </div>
+        <div class="item">
+          <span>☕ Coffee</span>
+          <button onclick="addToOrder('Coffee', 30)">Add ₹30</button>
+        </div>
+        <div class="item">
+          <span>🍵 Tea</span>
+          <button onclick="addToOrder('Tea', 20)">Add ₹20</button>
+        </div>
+        <div class="item">
+          <span>🍞 Roti</span>
+          <button onclick="addToOrder('Roti', 10)">Add ₹10</button>
+        </div>
+        <div class="item">
+          <span>🍲 Vegetable Curry</span>
+          <button onclick="addToOrder('Vegetable Curry', 90)">Add ₹90</button>
+        </div>
+        <div class="item">
+          <span>🥗 Samosa</span>
+          <button onclick="addToOrder('Samosa', 15)">Add ₹15</button>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="orderList"></ul>
+        <p class="total">Total: ₹<span id="totalAmount">0.00</span></p>
+        <div class="print-section">
+          <button onclick="printReceipt()">Print Receipt</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
