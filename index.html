@@ -8,59 +8,59 @@
   </head>
   <body>
     <div class="container">
-      <
+      <h1>Restaurant POS System</h1>
+
+      <!-- Menu Section -->
       <div class="menu">
         <h2>Menu</h2>
-        <div class="menu-items">
-          <div class="item">
-            <span>🍛 Biryani</span>
-            <button onclick="addToOrder('Biryani', 150)">Add ₹150</button>
-          </div>
-          <div class="item">
-            <span>🍲 Paneer Butter Masala</span>
-            <button onclick="addToOrder('Paneer Butter Masala', 120)">
-              Add ₹120
-            </button>
-          </div>
-          <div class="item">
-            <span>🍖 Chicken Curry</span>
-            <button onclick="addToOrder('Chicken Curry', 140)">Add ₹140</button>
-          </div>
-          <div class="item">
-            <span>🍛 Dal Makhani</span>
-            <button onclick="addToOrder('Dal Makhani', 100)">Add ₹100</button>
-          </div>
-          <div class="item">
-            <span>🥘 Masala Dosa</span>
-            <button onclick="addToOrder('Masala Dosa', 80)">Add ₹80</button>
-          </div>
-          <div class="item">
-            <span>☕ Coffee</span>
-            <button onclick="addToOrder('Coffee', 30)">Add ₹30</button>
-          </div>
-          <div class="item">
-            <span>🍵 Tea</span>
-            <button onclick="addToOrder('Tea', 20)">Add ₹20</button>
-          </div>
-          <div class="item">
-            <span>🍞 Roti</span>
-            <button onclick="addToOrder('Roti', 10)">Add ₹10</button>
-          </div>
-          <div class="item">
-            <span>🍲 Vegetable Curry</span>
-            <button onclick="addToOrder('Vegetable Curry', 90)">Add ₹90</button>
-          </div>
-          <div class="item">
-            <span>🥗 Samosa</span>
-            <button onclick="addToOrder('Samosa', 15)">Add ₹15</button>
-          </div>
+        <div class="menu-grid">
+          <button onclick="addToOrder('Biriyani', 180)">Biriyani - ₹180</button>
+          <button onclick="addToOrder('Roti', 20)">Roti - ₹20</button>
+          <button onclick="addToOrder('Curry', 100)">Curry - ₹100</button>
+          <button onclick="addToOrder('Tea', 10)">Tea - ₹10</button>
+          <button onclick="addToOrder('Coffee', 15)">Coffee - ₹15</button>
+          <button onclick="addToOrder('Dosa', 50)">Dosa - ₹50</button>
+          <button onclick="addToOrder('Idli', 30)">Idli - ₹30</button>
+          <button onclick="addToOrder('Samosa', 20)">Samosa - ₹20</button>
+          <button onclick="addToOrder('Vada', 25)">Vada - ₹25</button>
+          <button onclick="addToOrder('Paneer Tikka', 150)">
+            Paneer Tikka - ₹150
+          </button>
         </div>
       </div>
 
+      <!-- Order Summary Section -->
       <div class="order-summary">
         <h2>Order Summary</h2>
         <ul id="orderList"></ul>
         <p class="total">Total: ₹<span id="totalAmount">0.00</span></p>
+
+        <!-- Bill Paid / Not Paid Options -->
+        <div class="bill-paid-options">
+          <label>
+            <input
+              type="radio"
+              name="billStatus"
+              value="paid"
+              id="billPaidRadio"
+              checked
+              onclick="toggleBillStatus('paid')"
+            />
+            Bill Paid
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="billStatus"
+              value="notPaid"
+              id="billNotPaidRadio"
+              onclick="toggleBillStatus('notPaid')"
+            />
+            Not Paid
+          </label>
+        </div>
+
+        <!-- Print Receipt Button -->
         <div class="print-section">
           <button onclick="printReceipt()">Print Receipt</button>
         </div>
